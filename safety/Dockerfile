@@ -3,4 +3,6 @@ LABEL maintainer="info@practical-devsecops.com"
 
 RUN pip install --trusted-host pypi.python.org safety
 
-CMD ["python"]
+WORKDIR /src
+ENTRYPOINT ["safety"]
+CMD ["-h"]
