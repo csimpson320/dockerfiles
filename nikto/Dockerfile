@@ -6,7 +6,6 @@ RUN apk -U upgrade \
         nikto \
         openssl \
         perl-net-ssleay \
-    && touch /usr/share/doc/nikto/nikto.dtd \
     && rm -rf /var/cache/apk/*
 
 ENTRYPOINT ["nikto.pl"]
